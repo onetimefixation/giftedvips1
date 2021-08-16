@@ -1,5 +1,5 @@
 const dotenv = require('dotenv').config();
-const { QuickTwitchBot } = require("quick-chat-bot");
+//const { QuickTwitchBot } = require("quick-chat-bot");
 const path = require("path");
 const tmi = require('tmi.js');
 const mongoose = require('mongoose');
@@ -18,6 +18,9 @@ var userName = '';
 var totalSubs = 0;
 var totalGifts = 0;
 
+var dbConnect = 0;
+var botConnect = 0;
+
 
 // connnect to DB
 
@@ -27,6 +30,7 @@ const dbClient = new MongoClient(uri);
 //https://www.youtube.com/watch?v=M9Fs-CCe0Jo
 
 async function insertDB() {
+
   try {
     await dbClient.connect();
     const database = dbClient.db("mysterydb");
@@ -70,9 +74,11 @@ client.connect();
 
 client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages from this bot
-	    if (self) return;
+	//    if (self) return;
 
     var parsedMessage = message.split(' ');
+
+    // deyoclub just subscribed for 4 months in a row PogChamp
 
       // Scrub the messages for subscriptions -------------------------------------------------
    if (((parsedMessage[1] === "just") &&
@@ -124,9 +130,9 @@ console.log(`Total Subs = ${totalSubs}`);
                 client.connect(channel);
 
             setTimeout(function(){
-              client.say(channel, `Congratulations ${userName}. Because of your subscription, you have been randomly gifted VIP status for 24 hours.`);
+              client.say(channel, `rinoaMelon Congratulations ${userName} Because of your subscription, you have been randomly gifted VIP status for 24 hours. rinoaMelon`);
               client.disconnect();
-            }, 15000)
+            }, 20000)
        }
    }
 
@@ -135,8 +141,8 @@ console.log(`Total Subs = ${totalSubs}`);
 
       function calcRandomNum (){
       const min = 1;
-      const max = 10;
-      const match = 4;
+      const max = 5;
+      const match = 10;
           // generating a random number
       const a = Math.floor(Math.random() * (max - min + 1)) + min;
       

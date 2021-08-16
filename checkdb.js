@@ -1,5 +1,5 @@
 const dotenv = require('dotenv').config();
-const { QuickTwitchBot } = require("quick-chat-bot");
+//const { QuickTwitchBot } = require("quick-chat-bot");
 const path = require("path");
 const tmi = require('tmi.js')
 const mongoose = require('mongoose');
@@ -18,14 +18,14 @@ const client = new tmi.Client({
 
  client.connect();
 
-// do any spection broadcaster commands here like unVIPing a user
-/*  client.on('join', (channel, tags, message, self) => {
+// do any special broadcaster commands here like unVIPing a user
+   client.on('join', (channel, tags, message, self) => {
    console.log('connected ..........');
 
    setTimeout(function(){
-    client.say(channel, `/unvip a__and__w`);
+    client.say(channel, `/unvip catzofduty`);
  }, 5000)
-}); */
+});  
  
 
 
@@ -54,9 +54,6 @@ const client = new tmi.Client({
        const findResult = await VIPCollection.deleteMany({
           "timestamp":{$lt: new Date((new Date())-1000*60*60*24)}}); 
       //findResult.forEach(r=>console.log(r)); 
-      
-        //client.say(channel, `/unvip a__and__w`);
-        //client.say(channel, `/vip ${userName}`);
 
   //******************************************************************************************************/
   
