@@ -1,0 +1,27 @@
+{
+  "name": "giftedvip",
+  "version": "1.0.0",
+  "description": "robo0NEGUY",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mongodb": "^4.0.0",
+    "mongoose": "^5.13.3",
+    "quick-chat-bot": "^0.9.1",
+    "tmi.js": "^1.8.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onetimefixation/giftedVIPS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/onetimefixation/giftedVIPS/issues"
+  },
+  "homepage": "https://github.com/onetimefixation/giftedVIPS#readme"
+}
