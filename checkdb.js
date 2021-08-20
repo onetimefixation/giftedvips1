@@ -19,13 +19,13 @@ const client = new tmi.Client({
  client.connect();
 
 // do any special broadcaster commands here like unVIPing a user
-   client.on('join', (channel, tags, message, self) => {
+/*    client.on('join', (channel, tags, message, self) => {
    console.log('connected ..........');
 
    setTimeout(function(){
-    client.say(channel, `/unvip catzofduty`);
+    client.say(channel, `/unvip plankton_counter`);
  }, 5000)
-});  
+});   */
  
 
 
